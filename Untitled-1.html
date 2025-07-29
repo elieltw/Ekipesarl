@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device, initial-scale=1.0">
+        <title>EKIPEsarl</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="logo"><img src="imgekipe/logo.jpg" alt="logo Ekipesarl"></div>
+                <div class="hamburger" onclick="toggleMenu()">☰</div>
+                <nav class="nav-links" id="nav-links">
+                    <a href="#accueil">Accueil</a>
+                    <a href="#apropos">Á propos</a>
+                    <a href="#boutique">Boutique</a>
+                    <a href="#FAQ">FAQ</a></li>
+                    <a href="#contact">Contact</a>
+                    <a href="#localisation">Maps</a>
+                </nav>
+            </nav>
+        </header>
+        <section id="accueil" class="accueil">
+            <h1>EKIPEsarl</h1>
+            <p>Pour vous servir</p>
+        </section>
+        <section id="apropos" class="section">
+            <h2>Á propos</h2>
+            <p>EKIPE sarl est une entreprise de premier plan dans les domaines du commerce général, des travaux de génie civil et de la production des biens de consommation. Nous nous engageons à fournir des solutions innovantes et efficaces pour répondre aux besoins variés de nos clients. Avec une équipe d'experts qualifiés, nous sommes dédiés à offrir des services de haute qualité, en respectant les normes internationales. Notre objectif est de contribuer au développement durable tout en garantissant la satisfaction totale de nos clients.</p>
+            <p>Notre adresse:Sise 26, Avenue Mokabi,Commune de MontNgafula, Province de Kinshasa</p>
+        </section>
+        <section id="boutique" class="boutique">
+            <h2>Boutique</h2>
+            <div class="produits">
+                <div class="produit">
+                    <img src="imgekipe/poulet.jpg">
+                    <h3>Poulet de chaire</h3>
+                    <p>Poulet tendre elevé avec soins de beaucoup d'amour</p>
+                    <p class="prix">Prix:5$/kg</p>
+                    <a class="btn-produit" href="https://wa.me/243994127585" target="_blank">Contacter</a>
+                </div>
+                <div class="produit">
+                    <img src="imgekipe/œuf.jpg">
+                    <h3>Plateau d'oeuf</h3>
+                    <p>Plateau d'oeuf frais recolté de notre ferme</p>
+                    <p class="prix">prix:19000fc/plateau</p>
+                    <a class="btn-produit" href="https://wa.me/243994127585" target="_blank">Contacter</a>
+                </div>
+                <div class="produit">
+                    <img src="imgekipe/construction.jpg">
+                    <h3>construction</h3>
+                    <p>nous offrons aussi des services de construction</p>
+                    <p>lubumbashi   </p>
+                    <a class="btn-produit" href="https://wa.me/243994127585" target="_blank">Contacter</a>
+                </div>
+            </div>
+        </section>
+        <section id="FAQ" class="section">
+            <div class="faq-item">
+                <h3>FAQ</h3>
+                <p>vous livrez á domicile?</p>
+                <p>oui, nous proposons un service de livraison partout á Kinshasa</p>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <h2>Contactez-nous</h2>
+            <p>Téléphone:+243-818-309-823</p>
+            <p>Email:Tshimangawampoyi3hsc@gmail.com</p>
+            <p>whatsapp:<a href="https://wa.me/243994127585" target="_blank">Cliquez ici</a></p>
+            <form action="https://formspree.io/f/xjkordnn" method="post">
+                <input type="text" name="Nom" placeholder="Nom" required>
+                <input type="email" name="Email"placeholder="Email" required>
+                <textarea name="Message" placeholder="Message" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+        <section id="localisation" class="section">
+            <h2>Localisation</h2>
+            <p>Notre bureau est situé á Kinshasa</p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="300" style="border: 0;" allowfullscreen loading="lazy"></iframe>
+            </div> 
+        </section>
+        <footer>
+            <p>&copy;2025 Ekipesarl. Tous droits réservés.</p>
+            <a href="https://instagram.com/ekipesarl" target="_blank" title="instagram">instagram</a>
+        </footer>
+        <script>
+            function toggleMenu(){
+                const nav = document.getElementById('navlinks');
+                nav.classlist.toggle('active');
+            }
+        </script>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                scroll-behavior: smooth;
+                font-family: Arial,sans-serif;
+            }
+            body{
+                line-height: 1.6;
+                background: #f5f5f5;
+                color: #333;
+            }
+            header{
+                position: fixed;
+                width: 100%;
+                background: rgb(24, 11, 11);
+                color: white;
+                z-index: 10000;
+            }
+            .navbar{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 1200px;
+                margin: auto;
+                padding: 1rem 20px;
+            }
+            .logo img{
+                height: 50px;
+                width: auto;
+                display: block;
+            }
+            nav-links{
+                list-style: none;
+                display: flex;
+            }
+            .nav-links li{
+                margin-left: 20px;
+            }
+            .nav-links a{
+                color:white;
+                font-weight: bold;
+                transition: color 0.3s ease;
+            }
+            .nav-links a:hover{
+                color: #007bff;
+            }
+            .hamburger{
+                display: none;
+                font-size: 30px;
+                cursor: pointer;
+            }
+            .section{
+                padding: 100px 20px;
+                max-width: 1200px;
+                margin: auto;
+                text-align: center;
+            }
+            .accueil{
+                background: url(imgekipe/accueil1.avif)no-repeat center center/cover;
+                color: #333;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-top: 80px;
+            }
+            .accueil h1{
+                font-size: 2.5rem;
+                margin-bottom: 10px;
+            }
+            .btn-produit{
+                display: inline-block;
+                padding: 10px 20px;
+                background: #007bff;
+                color: white;
+                margin-top: 20px;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+            .btn-produit:hover{
+                background: #0056b3;
+            }
+            .boutique{
+                position: relative;
+                background: url(imgekipe/boutiques.jpg)no-repeat center center/cover;
+                padding-bottom: 80px;
+                z-index: 1;
+            }
+            .produits{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: center;
+            }
+            .produit{
+                background: white;
+                padding: 15px;
+                width: 250px;
+                box-shadow: 10px rgba(0,0,0,0.1);
+                text-align: center;
+                transition: transform 0.3s ease;
+                margin-bottom: 40px;
+                border-radius: 5px;
+            }
+            .produit:hover{
+                transform: scale(1.03);
+            }
+            .produit img{
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+                border-radius: 5px 5px;
+                margin-bottom: 10px;
+            }
+            .produit h3{
+                margin-bottom: 5px;
+            }
+            .produit .prix{
+                color: #007bff;
+                font-weight:bold;
+                margin-top: 10px;
+            }
+            faq-item{
+                background: white;
+                padding: 15px;
+                margin-bottom: 10px;
+                text-align: left;
+                border-radius: 5px;
+                box-shadow: 10px;
+            }
+            .faq-item h3{
+                margin-bottom: 5px;
+            }
+            .contact p{
+                margin-bottom: 5px;
+            }
+            .contact form{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                max-width: 500px;
+                margin: 20px;
+            }
+            .contact input,
+            .contact textarea{
+                padding: 10px;
+                border: 1 solid #ddd;
+                border-radius: 4px;
+            }
+            .contact button{
+                background: #007bff;
+                color: white;
+                padding: 10px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+            .contact button:hover{
+                background: #0056b3;
+            }
+            .map-container iframe{
+                border: 0;
+                border-radius: 5px;
+            }
+            footer{
+                background: #333;
+                color: white;
+                padding: 15px;
+                text-align: center;
+            }
+        </style>
+    </body>
+</html>
